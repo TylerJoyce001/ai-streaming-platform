@@ -1,6 +1,5 @@
 import MoviesCarousel from "@/components/MoviesCarousel";
 import { getDiscoverMovies, getPopularMovies } from "@/lib/getMovies";
-import react from "react";
 
 type Props = {
   params: {
@@ -11,6 +10,8 @@ type Props = {
     genre: string;
   };
 };
+
+
 
 async function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
   const movies = await getDiscoverMovies(id);
